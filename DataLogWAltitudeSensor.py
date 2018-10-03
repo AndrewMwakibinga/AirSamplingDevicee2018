@@ -22,6 +22,7 @@ while True:
         sea_level = sensor.read_sealevel_pressure()
         print 'Sealevel Pressure = {0:0.2f} Pa'.format(sensor.read_sealevel_pressure()) # The sea-level pressure
         file.write(str(now)+","+str(temp)+","+str(pressure)+","+str(altitude)+","+str(sea_level)+"\n")
+	#have to send info to client data line by data line
         file.flush()
         time.sleep(5)
 		file.close()
